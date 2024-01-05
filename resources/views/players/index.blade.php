@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="col-10">
+    <div class="col col-md-8 col-lg-10">
         <div class="card my-2">
             <div class="card-header">
                 <span>Goleiros</span>
@@ -12,7 +12,7 @@
                                 @csrf
                                 <div class="input-group mb-3">
                                     <button type="submit" class="input-group-text"
-                                        style="min-width: 120px">{{ $p->user->name }}</button>
+                                        style="min-width: 100px">{{ $p->user->name }}</button>
                                     <input type="number" class="form-control" id="goals{{ $p->id }}" name="goals"
                                         placeholder="gol" aria-label="gol">
                                     <input type="number" class="form-control" id="assists{{ $p->id }}"
@@ -40,7 +40,7 @@
                                 @csrf
                                 <div class="input-group mb-3">
                                     <button type="submit" class="input-group-text"
-                                        style="min-width: 120px">{{ $p->user->name }}</button>
+                                        style="min-width: 100px">{{ $p->user->name }}</button>
                                     <input type="number" class="form-control" id="goals{{ $p->id }}" name="goals"
                                         placeholder="gol" aria-label="gol">
                                     <input type="number" class="form-control" id="assists{{ $p->id }}"
@@ -68,7 +68,7 @@
                                 @csrf
                                 <div class="input-group mb-3">
                                     <button type="submit" class="input-group-text"
-                                        style="min-width: 120px">{{ $p->user->name }}</button>
+                                        style="min-width: 100px">{{ $p->user->name }}</button>
                                     <input type="number" class="form-control" id="goals{{ $p->id }}" name="goals"
                                         placeholder="gol" aria-label="gol">
                                     <input type="number" class="form-control" id="assists{{ $p->id }}"
@@ -96,7 +96,7 @@
                               @csrf
                               <div class="input-group mb-3">
                                   <button type="submit" class="input-group-text"
-                                      style="min-width: 120px">{{ $p->user->name }}</button>
+                                      style="min-width: 100px">{{ $p->user->name }}</button>
                                   <input type="number" class="form-control" id="goals{{ $p->id }}" name="goals"
                                       placeholder="gol" aria-label="gol">
                                   <input type="number" class="form-control" id="assists{{ $p->id }}"

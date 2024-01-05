@@ -4,7 +4,7 @@
         <x-authentication-card-logo />
     </div>
     <div class="d-flex justify-content-center">
-        <div class="card col-4">
+        <div class="card">
             <div class="card-body">
                 <form method="POST" action="{{ route('register') }}">
                     @csrf

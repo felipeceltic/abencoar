@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="col-10">
+    <div class="col col-md-8 col-lg-10 pt-5">
         <div class="card">
             <div class="card-header">
                 Perfil jogador
@@ -14,7 +14,7 @@
                 <form action="{{ route('createUpdatePlayer', Auth::user()->id) }}" method="post">
                     @csrf
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="number">Numero da camisa</span>
                                 <input class="form-control" type="number" name="number" id="number"
@@ -22,7 +22,7 @@
                                     @if (Auth::user()->player != null) value="{{ Auth::user()->player->number }}" @endif>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <select class="form-select mb-3" name="position" id="position">
                                 <option value="GK" @if (Auth::user()->player != null && Auth::user()->player->position == 'GK') selected @endif>
                                     Goleiro
@@ -38,6 +38,7 @@
                                 </option>
                             </select>
                         </div>
+                        <hr class="mt-3 pb-3">
                         <div class="col-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="goals">Gols</span>
