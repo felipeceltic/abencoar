@@ -63,7 +63,7 @@
     <div class="offcanvas-header justify-content-end">
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body">
+    <div class="offcanvas-body w-100 m-0 p-0">
         <div class="col d-block d-sm-none">
 
             <a href="/" class="d-flex justify-content-center p-2 text-decoration-none">
