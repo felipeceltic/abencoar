@@ -18,18 +18,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect()->route('login');
 });
+Route::middleware('IsAdmin')->group(function () {
+    // Jogadores
+    Route::get('players', [PlayerController::class, 'index'])->name('player.index');
+    Route::post('player/{user}', [PlayerController::class, 'createOrUpdatePlayer'])->name('createUpdatePlayer');
+    Route::post('statistics/{player}', [PlayerController::class, 'updatePlayerStatistics'])->name('updatePlayerStatistics');
 
-// Jogadores
-Route::get('players', [PlayerController::class, 'index'])->name('player.index');
-Route::post('player/{user}', [PlayerController::class, 'createOrUpdatePlayer'])->name('createUpdatePlayer');
-Route::post('statistics/{player}', [PlayerController::class, 'updatePlayerStatistics'])->name('updatePlayerStatistics');
+    // Times
+    Route::get('teams', [TeamsController::class, 'index'])->name('team.index');
+    Route::get('team', [TeamsController::class, 'createTeam'])->name('team.create');
+    Route::post('team', [TeamsController::class, 'storeTeam'])->name('team.store');
+    Route::post('delete/teams/{teams}', [TeamsController::class, 'deleteTeam'])->name('team.delete');
+});
 
-// Times
-Route::get('teams', [TeamsController::class, 'index'])->name('team.index');
-Route::get('team', [TeamsController::class, 'createTeam'])->name('team.create');
-Route::post('team', [TeamsController::class, 'storeTeam'])->name('team.store');
-Route::post('delete/teams/{teams}', [TeamsController::class, 'deleteTeam'])->name('team.delete');
-
+Route::get('/error', function () {
+    $page = 'error';
+    return view('errors.404', compact('page'));
+})->name('404');
 
 Route::middleware([
     'auth:sanctum',
