@@ -8,7 +8,16 @@ use Illuminate\Http\Request;
 
 class PlayerController extends Controller
 {
-    public function createOrUpdatePlayer(Request $request, User $user){
+    public function index()
+    {
+        $page = 'Players';
+        $players = Player::all();
+
+        return view('players.index', compact('players', 'page'));
+    }
+
+    public function createOrUpdatePlayer(Request $request, User $user)
+    {
 
         $data = $request->validate([
             'number' => 'required',
@@ -21,9 +30,9 @@ class PlayerController extends Controller
                 'number' => $data['number'],
                 'position' => $data['position']
             ]);
-    
+
             $player->save();
-    
+
             return redirect()->back()->with('success', 'Jogador criado com sucesso');
         }
 
@@ -34,7 +43,8 @@ class PlayerController extends Controller
         return redirect()->back()->with('success', 'Jogador atualizado com sucesso');
     }
 
-    public function updatePlayerStatistics(Request $request, Player $player) {
+    public function updatePlayerStatistics(Request $request, Player $player)
+    {
 
         $data = $request->validate([
             'goals' => 'integer|nullable|',
@@ -52,6 +62,5 @@ class PlayerController extends Controller
         }
 
         return redirect()->back()->with('success', 'Estatisticas do jogador atualizadas com sucesso!');
-
     }
 }

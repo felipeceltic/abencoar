@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 // Jogadores
+Route::get('players', [PlayerController::class, 'index'])->name('player.index');
 Route::post('player/{user}', [PlayerController::class, 'createOrUpdatePlayer'])->name('createUpdatePlayer');
 Route::post('statistics/{player}', [PlayerController::class, 'updatePlayerStatistics'])->name('updatePlayerStatistics');
 

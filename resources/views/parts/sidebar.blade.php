@@ -1,5 +1,5 @@
 <div class="col">
-  <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary" style="height: 100vh;">
+  <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary" style="height: 100%;">
       <a href="/" class="d-flex justify-content-center p-2 text-decoration-none">
           <x-application-logo />
       </a>
@@ -10,6 +10,12 @@
                   Meu jogador
               </a>
           </li>
+          <li>
+            <a href="{{ route('player.index') }}"
+                class="nav-link @if ($page === 'Players') active @endif py-3 border-bottom rounded-0">
+                Listar Jogadores
+            </a>
+        </li>
           <li>
               <a href="{{ route('team.index') }}"
                   class="nav-link @if ($page === 'Teams') active @endif py-3 border-bottom rounded-0">
