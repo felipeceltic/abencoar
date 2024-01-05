@@ -53,7 +53,7 @@
     </div>
 </div>
 
-<div class="d-sm-none fixed-bottom">
+<div class="d-sm-none fixed-bottom mb-3">
     <button class="btn btn-primary w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
         <i class="bi bi-list"> Menu</i>
     </button>

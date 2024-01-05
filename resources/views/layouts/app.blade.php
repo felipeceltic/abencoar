@@ -31,7 +31,7 @@
     @livewireStyles
 </head>
 
-<body class="container text-center p-0 m-0">
+<body class="container text-center p-2 p-sm-0 m-0">
     <div class="row">
         @include('parts.sidebar')
         @yield('content')

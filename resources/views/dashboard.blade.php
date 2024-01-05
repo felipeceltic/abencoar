@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="col col-md-8 col-lg-10 pt-5">
+    <div class="col col-md-8 col-lg-10 mb-5 mb-sm-0 pt-5">
         <div class="card">
             <div class="card-header">
                 Perfil jogador

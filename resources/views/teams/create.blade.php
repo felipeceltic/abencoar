@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="col col-md-8 col-lg-10">
+    <div class="col col-md-8 col-lg-10 mb-5 mb-sm-0">
         <div class="card text-center w-100">
             <div class="card-header">
                 Times
