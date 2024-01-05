@@ -31,7 +31,7 @@
                     </div>
                     <div class="mb-3 form-check">
                         <div class="d-flex justify-content-between">
-                            <button type="submit" class="btn btn-primary">Entrar</button>
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
                             <a class="text-decoration-none" href="{{ route('login') }}">Já possui cadastro?</a>
                         </div>
                     </div>
