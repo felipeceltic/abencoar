@@ -18,7 +18,7 @@
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="name">Meu nome</span>
                                 <input class="form-control" type="text" name="name" id="name"
-                                    aria-describedby="name"
+                                    aria-describedby="name" required
                                     @if (Auth::user()->player != null) value="{{ Auth::user()->player->user->name }}" @endif>
                             </div>
                         </div>
@@ -26,12 +26,12 @@
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="number">Numero da camisa</span>
                                 <input class="form-control" type="number" name="number" id="number"
-                                    aria-describedby="number"
+                                    aria-describedby="number" required
                                     @if (Auth::user()->player != null) value="{{ Auth::user()->player->number }}" @endif>
                             </div>
                         </div>
                         <div class="col-12 col-lg-6">
-                            <select class="form-select mb-3" name="position" id="position">
+                            <select class="form-select mb-3" name="position" id="position" required>
                                 <option value="GK" @if (Auth::user()->player != null && Auth::user()->player->position == 'GK') selected @endif>
                                     Goleiro
                                 </option>
