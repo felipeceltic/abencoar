@@ -28,6 +28,7 @@ class PlayerController extends Controller
     {
 
         $data = $request->validate([
+            'name' => 'required',
             'number' => 'required',
             'position' => 'required',
         ]);
@@ -47,6 +48,9 @@ class PlayerController extends Controller
         $user->player->number = $data['number'];
         $user->player->position = $data['position'];
         $user->player->save();
+
+        $user->name = $data['name'];
+        $user->save();
 
         return redirect()->back()->with('success', 'Jogador atualizado com sucesso');
     }

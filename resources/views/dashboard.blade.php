@@ -14,6 +14,14 @@
                 <form action="{{ route('createUpdatePlayer', Auth::user()->id) }}" method="post">
                     @csrf
                     <div class="row">
+                        <div class="col-12">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="name">Meu nome</span>
+                                <input class="form-control" type="text" name="name" id="name"
+                                    aria-describedby="name"
+                                    @if (Auth::user()->player != null) value="{{ Auth::user()->player->user->name }}" @endif>
+                            </div>
+                        </div>
                         <div class="col-12 col-lg-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="number">Numero da camisa</span>
