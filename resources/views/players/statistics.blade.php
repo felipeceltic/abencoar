@@ -5,7 +5,7 @@
             <div class="card-header">
                 <span>Goleiros</span>
                 <div class="card-body">
-                  <table class="table table-striped table-hover">
+                  <table class="table table-striped table-hover table-responsive">
                     <thead>
                         <tr>
                             <th scope="col">Nome</th>
@@ -37,7 +37,7 @@
             <div class="card-header">
                 <span>Defensores</span>
                 <div class="card-body">
-                  <table class="table table-striped table-hover">
+                  <table class="table table-striped table-hover table-responsive">
                     <thead>
                         <tr>
                             <th scope="col">Nome</th>
@@ -69,7 +69,7 @@
             <div class="card-header">
                 <span>Meias</span>
                 <div class="card-body">
-                  <table class="table table-striped table-hover">
+                  <table class="table table-striped table-hover table-responsive">
                     <thead>
                         <tr>
                             <th scope="col">Nome</th>
@@ -101,7 +101,7 @@
             <div class="card-header">
                 <span>Atacantes</span>
                 <div class="card-body">
-                    <table class="table table-striped table-hover">
+                    <table class="table table-striped table-hover table-responsive">
                         <thead>
                             <tr>
                                 <th scope="col">Nome</th>
