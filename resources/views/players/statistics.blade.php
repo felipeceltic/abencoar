@@ -5,30 +5,32 @@
             <div class="card-header">
                 <span>Goleiros</span>
                 <div class="card-body">
-                  <table class="table table-striped table-hover table-responsive">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Gols</th>
-                            <th scope="col">Assistências</th>
-                            <th scope="col">Desarmes</th>
-                            <th scope="col">Defesas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($players as $p)
-                            @if ($p->position == 'GK')
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
                                 <tr>
-                                    <th scope="row">{{ $p->user->name }}</th>
-                                    <td>{{ $p->goals }}</td>
-                                    <td>{{ $p->assists }}</td>
-                                    <td>{{ $p->tackles }}</td>
-                                    <td>{{ $p->defenses }}</td>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Gols</th>
+                                    <th scope="col">Assistências</th>
+                                    <th scope="col">Desarmes</th>
+                                    <th scope="col">Defesas</th>
                                 </tr>
-                            @endif
-                        @endforeach
-                    </tbody>
-                </table>
+                            </thead>
+                            <tbody>
+                                @foreach ($players as $p)
+                                    @if ($p->position == 'GK')
+                                        <tr>
+                                            <th scope="row">{{ $p->user->name }}</th>
+                                            <td>{{ $p->goals }}</td>
+                                            <td>{{ $p->assists }}</td>
+                                            <td>{{ $p->tackles }}</td>
+                                            <td>{{ $p->defenses }}</td>
+                                        </tr>
+                                    @endif
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,30 +39,32 @@
             <div class="card-header">
                 <span>Defensores</span>
                 <div class="card-body">
-                  <table class="table table-striped table-hover table-responsive">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Gols</th>
-                            <th scope="col">Assistências</th>
-                            <th scope="col">Desarmes</th>
-                            <th scope="col">Defesas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($players as $p)
-                            @if ($p->position == 'DF')
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
                                 <tr>
-                                    <th scope="row">{{ $p->user->name }}</th>
-                                    <td>{{ $p->goals }}</td>
-                                    <td>{{ $p->assists }}</td>
-                                    <td>{{ $p->tackles }}</td>
-                                    <td>{{ $p->defenses }}</td>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Gols</th>
+                                    <th scope="col">Assistências</th>
+                                    <th scope="col">Desarmes</th>
+                                    <th scope="col">Defesas</th>
                                 </tr>
-                            @endif
-                        @endforeach
-                    </tbody>
-                </table>
+                            </thead>
+                            <tbody>
+                                @foreach ($players as $p)
+                                    @if ($p->position == 'DF')
+                                        <tr>
+                                            <th scope="row">{{ $p->user->name }}</th>
+                                            <td>{{ $p->goals }}</td>
+                                            <td>{{ $p->assists }}</td>
+                                            <td>{{ $p->tackles }}</td>
+                                            <td>{{ $p->defenses }}</td>
+                                        </tr>
+                                    @endif
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,30 +73,32 @@
             <div class="card-header">
                 <span>Meias</span>
                 <div class="card-body">
-                  <table class="table table-striped table-hover table-responsive">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Gols</th>
-                            <th scope="col">Assistências</th>
-                            <th scope="col">Desarmes</th>
-                            <th scope="col">Defesas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($players as $p)
-                            @if ($p->position == 'MC')
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
                                 <tr>
-                                    <th scope="row">{{ $p->user->name }}</th>
-                                    <td>{{ $p->goals }}</td>
-                                    <td>{{ $p->assists }}</td>
-                                    <td>{{ $p->tackles }}</td>
-                                    <td>{{ $p->defenses }}</td>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Gols</th>
+                                    <th scope="col">Assistências</th>
+                                    <th scope="col">Desarmes</th>
+                                    <th scope="col">Defesas</th>
                                 </tr>
-                            @endif
-                        @endforeach
-                    </tbody>
-                </table>
+                            </thead>
+                            <tbody>
+                                @foreach ($players as $p)
+                                    @if ($p->position == 'MC')
+                                        <tr>
+                                            <th scope="row">{{ $p->user->name }}</th>
+                                            <td>{{ $p->goals }}</td>
+                                            <td>{{ $p->assists }}</td>
+                                            <td>{{ $p->tackles }}</td>
+                                            <td>{{ $p->defenses }}</td>
+                                        </tr>
+                                    @endif
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,30 +107,32 @@
             <div class="card-header">
                 <span>Atacantes</span>
                 <div class="card-body">
-                    <table class="table table-striped table-hover table-responsive">
-                        <thead>
-                            <tr>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Gols</th>
-                                <th scope="col">Assistências</th>
-                                <th scope="col">Desarmes</th>
-                                <th scope="col">Defesas</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($players as $p)
-                                @if ($p->position == 'AT')
-                                    <tr>
-                                        <th scope="row">{{ $p->user->name }}</th>
-                                        <td>{{ $p->goals }}</td>
-                                        <td>{{ $p->assists }}</td>
-                                        <td>{{ $p->tackles }}</td>
-                                        <td>{{ $p->defenses }}</td>
-                                    </tr>
-                                @endif
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Gols</th>
+                                    <th scope="col">Assistências</th>
+                                    <th scope="col">Desarmes</th>
+                                    <th scope="col">Defesas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($players as $p)
+                                    @if ($p->position == 'AT')
+                                        <tr>
+                                            <th scope="row">{{ $p->user->name }}</th>
+                                            <td>{{ $p->goals }}</td>
+                                            <td>{{ $p->assists }}</td>
+                                            <td>{{ $p->tackles }}</td>
+                                            <td>{{ $p->defenses }}</td>
+                                        </tr>
+                                    @endif
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
