@@ -5,22 +5,30 @@
             <div class="card-header">
                 <span>Goleiros</span>
                 <div class="card-body">
-                    @foreach ($players as $p)
-                        @if ($p->position == 'GK')
-                            <div class="input-group mb-3">
-                                <button type="submit" class="input-group-text" style="min-width: 100px"
-                                    disabled>{{ $p->user->name }}</button>
-                                <input type="number" class="form-control" id="goals{{ $p->id }}" name="goals"
-                                    placeholder="gol" aria-label="gol" value="{{ $p->goals }}" readonly>
-                                <input type="number" class="form-control" id="assists{{ $p->id }}" name="assists"
-                                    placeholder="ass" aria-label="ass" value="{{ $p->assists }}" readonly>
-                                <input type="number" class="form-control" id="defenses{{ $p->id }}" name="defenses"
-                                    placeholder="defesa" aria-label="defesa" value="{{ $p->defenses }}" readonly>
-                                <input type="number" class="form-control" id="tackles{{ $p->id }}" name="tackles"
-                                    placeholder="desarme" aria-label="desarme" value="{{ $p->tackles }}" readonly>
-                            </div>
-                        @endif
-                    @endforeach
+                  <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Gols</th>
+                            <th scope="col">Assistências</th>
+                            <th scope="col">Desarmes</th>
+                            <th scope="col">Defesas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($players as $p)
+                            @if ($p->position == 'GK')
+                                <tr>
+                                    <th scope="row">{{ $p->user->name }}</th>
+                                    <td>{{ $p->goals }}</td>
+                                    <td>{{ $p->assists }}</td>
+                                    <td>{{ $p->tackles }}</td>
+                                    <td>{{ $p->defenses }}</td>
+                                </tr>
+                            @endif
+                        @endforeach
+                    </tbody>
+                </table>
                 </div>
             </div>
         </div>
@@ -29,22 +37,30 @@
             <div class="card-header">
                 <span>Defensores</span>
                 <div class="card-body">
-                    @foreach ($players as $p)
-                        @if ($p->position == 'DF')
-                            <div class="input-group mb-3">
-                                <button type="submit" class="input-group-text" style="min-width: 100px"
-                                    disabled>{{ $p->user->name }}</button>
-                                <input type="number" class="form-control" id="goals{{ $p->id }}" name="goals"
-                                    placeholder="gol" aria-label="gol" value="{{ $p->goals }}" readonly>
-                                <input type="number" class="form-control" id="assists{{ $p->id }}" name="assists"
-                                    placeholder="ass" aria-label="ass" value="{{ $p->assists }}" readonly>
-                                <input type="number" class="form-control" id="defenses{{ $p->id }}" name="defenses"
-                                    placeholder="defesa" aria-label="defesa" value="{{ $p->defenses }}" readonly>
-                                <input type="number" class="form-control" id="tackles{{ $p->id }}" name="tackles"
-                                    placeholder="desarme" aria-label="desarme" value="{{ $p->tackles }}" readonly>
-                            </div>
-                        @endif
-                    @endforeach
+                  <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Gols</th>
+                            <th scope="col">Assistências</th>
+                            <th scope="col">Desarmes</th>
+                            <th scope="col">Defesas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($players as $p)
+                            @if ($p->position == 'DF')
+                                <tr>
+                                    <th scope="row">{{ $p->user->name }}</th>
+                                    <td>{{ $p->goals }}</td>
+                                    <td>{{ $p->assists }}</td>
+                                    <td>{{ $p->tackles }}</td>
+                                    <td>{{ $p->defenses }}</td>
+                                </tr>
+                            @endif
+                        @endforeach
+                    </tbody>
+                </table>
                 </div>
             </div>
         </div>
@@ -53,23 +69,30 @@
             <div class="card-header">
                 <span>Meias</span>
                 <div class="card-body">
-                    @foreach ($players as $p)
-                        @if ($p->position == 'MC')
-                            <div class="input-group mb-3">
-                                <button type="submit" class="input-group-text" style="min-width: 100px"
-                                    disabled>{{ $p->user->name }}</button>
-                                <input type="number" class="form-control" id="goals{{ $p->id }}" name="goals"
-                                    placeholder="gol" aria-label="gol" value="{{ $p->goals }}" readonly>
-                                <input type="number" class="form-control" id="assists{{ $p->id }}" name="assists"
-                                    placeholder="ass" aria-label="ass" value="{{ $p->assists }}" readonly>
-                                <input type="number" class="form-control" id="defenses{{ $p->id }}" name="defenses"
-                                    placeholder="defesa" aria-label="defesa" value="{{ $p->defenses }}" readonly>
-                                <input type="number" class="form-control" id="tackles{{ $p->id }}"
-                                    name="tackles" placeholder="desarme" aria-label="desarme"
-                                    value="{{ $p->tackles }}" readonly>
-                            </div>
-                        @endif
-                    @endforeach
+                  <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Gols</th>
+                            <th scope="col">Assistências</th>
+                            <th scope="col">Desarmes</th>
+                            <th scope="col">Defesas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($players as $p)
+                            @if ($p->position == 'MC')
+                                <tr>
+                                    <th scope="row">{{ $p->user->name }}</th>
+                                    <td>{{ $p->goals }}</td>
+                                    <td>{{ $p->assists }}</td>
+                                    <td>{{ $p->tackles }}</td>
+                                    <td>{{ $p->defenses }}</td>
+                                </tr>
+                            @endif
+                        @endforeach
+                    </tbody>
+                </table>
                 </div>
             </div>
         </div>
@@ -78,25 +101,30 @@
             <div class="card-header">
                 <span>Atacantes</span>
                 <div class="card-body">
-                    @foreach ($players as $p)
-                        @if ($p->position == 'AT')
-                            <div class="input-group mb-3">
-                                <button type="submit" class="input-group-text" style="min-width: 100px"
-                                    disabled>{{ $p->user->name }}</button>
-                                <input type="number" class="form-control" id="goals{{ $p->id }}" name="goals"
-                                    placeholder="gol" aria-label="gol" value="{{ $p->goals }}" readonly>
-                                <input type="number" class="form-control" id="assists{{ $p->id }}"
-                                    name="assists" placeholder="ass" aria-label="ass" value="{{ $p->assists }}"
-                                    readonly>
-                                <input type="number" class="form-control" id="defenses{{ $p->id }}"
-                                    name="defenses" placeholder="defesa" aria-label="defesa"
-                                    value="{{ $p->defenses }}" readonly>
-                                <input type="number" class="form-control" id="tackles{{ $p->id }}"
-                                    name="tackles" placeholder="desarme" aria-label="desarme"
-                                    value="{{ $p->tackles }}" readonly>
-                            </div>
-                        @endif
-                    @endforeach
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Gols</th>
+                                <th scope="col">Assistências</th>
+                                <th scope="col">Desarmes</th>
+                                <th scope="col">Defesas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($players as $p)
+                                @if ($p->position == 'AT')
+                                    <tr>
+                                        <th scope="row">{{ $p->user->name }}</th>
+                                        <td>{{ $p->goals }}</td>
+                                        <td>{{ $p->assists }}</td>
+                                        <td>{{ $p->tackles }}</td>
+                                        <td>{{ $p->defenses }}</td>
+                                    </tr>
+                                @endif
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
