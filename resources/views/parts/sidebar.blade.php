@@ -19,6 +19,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('player.statistics') }}"
+                        class="nav-link @if ($page === 'PlayersStatistics') active @endif py-3 border-bottom rounded-0">
+                        Listar Estatisticas
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('team.index') }}"
                         class="nav-link @if ($page === 'Teams') active @endif py-3 border-bottom rounded-0">
                         Listar Times

@@ -43,6 +43,7 @@ Route::post('player/{user}', [PlayerController::class, 'createOrUpdatePlayer'])-
 Route::middleware('IsAdmin')->group(function () {
     // Jogadores
     Route::get('players', [PlayerController::class, 'index'])->name('player.index');
+    Route::get('statistics/players', [PlayerController::class, 'statisticsPlayers'])->name('player.statistics');
     Route::post('statistics/{player}', [PlayerController::class, 'updatePlayerStatistics'])->name('updatePlayerStatistics');
 
     // Times

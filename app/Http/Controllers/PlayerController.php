@@ -16,6 +16,14 @@ class PlayerController extends Controller
         return view('players.index', compact('players', 'page'));
     }
 
+    public function statisticsPlayers()
+    {
+        $page = 'PlayersStatistics';
+        $players = Player::all();
+
+        return view('players.statistics', compact('players', 'page'));
+    }
+
     public function createOrUpdatePlayer(Request $request, User $user)
     {
 
