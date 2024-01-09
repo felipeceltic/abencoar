@@ -15,16 +15,16 @@
                 <li>
                     <a href="{{ route('player.index') }}"
                         class="nav-link @if ($page === 'Players') active @endif py-3 border-bottom rounded-0">
-                        Listar Jogadores
+                        Inserir Estatisticas
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('player.statistics') }}"
+                    <a href="{{ route('player.statistics.show') }}"
                         class="nav-link @if ($page === 'PlayersStatistics') active @endif py-3 border-bottom rounded-0">
                         Listar Estatisticas
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="{{ route('team.index') }}"
                         class="nav-link @if ($page === 'Teams') active @endif py-3 border-bottom rounded-0">
                         Listar Times
@@ -35,7 +35,7 @@
                         class="nav-link @if ($page === 'createTeam') active @endif py-3 border-bottom rounded-0">
                         Criar Times
                     </a>
-                </li>
+                </li> --}}
             @endif
         </ul>
         <div class="dropdown border-top">
@@ -86,16 +86,16 @@
                     <li>
                         <a href="{{ route('player.index') }}"
                             class="nav-link @if ($page === 'Players') active @endif py-3 border-bottom rounded-0">
-                            Listar Jogadores
+                            Inserir Estatisticas
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('player.statistics') }}"
+                        <a href="{{ route('player.statistics.show') }}"
                             class="nav-link @if ($page === 'PlayersStatistics') active @endif py-3 border-bottom rounded-0">
                             Listar Estatisticas
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('team.index') }}"
                             class="nav-link @if ($page === 'Teams') active @endif py-3 border-bottom rounded-0">
                             Listar Times
@@ -106,7 +106,7 @@
                             class="nav-link @if ($page === 'createTeam') active @endif py-3 border-bottom rounded-0">
                             Criar Times
                         </a>
-                    </li>
+                    </li> --}}
                 @endif
             </ul>
             <div class="dropdown border-top">

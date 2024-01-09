@@ -17,10 +17,6 @@ return new class extends Migration
             $table->string('position')->default('Gandula');
             $table->integer('number')->nullable();
             $table->integer('overall')->default(0);
-            $table->integer('goals')->default(0);
-            $table->integer('assists')->default(0);
-            $table->integer('defenses')->default(0);
-            $table->integer('tackles')->default(0);
             $table->timestamps();
         });
     }

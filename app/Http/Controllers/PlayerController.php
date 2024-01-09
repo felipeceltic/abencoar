@@ -16,14 +16,6 @@ class PlayerController extends Controller
         return view('players.index', compact('players', 'page'));
     }
 
-    public function statisticsPlayers()
-    {
-        $page = 'PlayersStatistics';
-        $players = Player::all();
-
-        return view('players.statistics', compact('players', 'page'));
-    }
-
     public function createOrUpdatePlayer(Request $request, User $user)
     {
 
@@ -55,24 +47,4 @@ class PlayerController extends Controller
         return redirect()->back()->with('success', 'Jogador atualizado com sucesso');
     }
 
-    public function updatePlayerStatistics(Request $request, Player $player)
-    {
-
-        $data = $request->validate([
-            'goals' => 'integer|nullable|',
-            'assists' => 'integer|nullable',
-            'defenses' => 'integer|nullable',
-            'tackles' => 'integer|nullable',
-        ]);
-
-        foreach ($data as $d => $v) {
-            if ($v != null) {
-                $player->$d += $v;
-                $player->overall += $v;
-            }
-            $player->save();
-        }
-
-        return redirect()->back()->with('success', 'Estatisticas do jogador atualizadas com sucesso!');
-    }
 }

@@ -28,7 +28,7 @@
                                         @php
                                             $player = App\Models\Player::find($p);
                                         @endphp
-                                        <form action="{{ route('updatePlayerStatistics', $player->id) }}" method="POST"
+                                        <form action="{{ route('player.statistics.update', $player->id) }}" method="POST"
                                             id="{{ $player->id }}">
                                             @csrf
                                             <div class="input-group mb-3">

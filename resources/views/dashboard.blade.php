@@ -11,7 +11,7 @@
                 </div>
             @endif
             <div class="card-body">
-                <form action="{{ route('createUpdatePlayer', Auth::user()->id) }}" method="post">
+                <form action="{{ route('player.update', Auth::user()->id) }}" method="post">
                     @csrf
                     <div class="row">
                         <div class="col-12">

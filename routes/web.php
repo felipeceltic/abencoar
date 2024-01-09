@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\StatisticsController;
 use App\Http\Controllers\TeamsController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,14 +38,17 @@ Route::get('/error', function () {
 })->name('404');
 
 // Jogadores livre
-Route::post('player/{user}', [PlayerController::class, 'createOrUpdatePlayer'])->name('createUpdatePlayer');
+Route::post('player/{user}', [PlayerController::class, 'createOrUpdatePlayer'])->name('player.update');
 
 // Administradores
 Route::middleware('IsAdmin')->group(function () {
     // Jogadores
     Route::get('players', [PlayerController::class, 'index'])->name('player.index');
-    Route::get('statistics/players', [PlayerController::class, 'statisticsPlayers'])->name('player.statistics');
-    Route::post('statistics/{player}', [PlayerController::class, 'updatePlayerStatistics'])->name('updatePlayerStatistics');
+
+    // Estatisticas
+    Route::get('statistics/show', [StatisticsController::class, 'showPlayerStatistics'])->name('player.statistics.show');
+    Route::get('statistics/details/{player}', [StatisticsController::class, 'listPlayerStatistics'])->name('player.statistics.list');
+    Route::post('statistics', [StatisticsController::class, 'updatePlayerStatistics'])->name('player.statistics.update');
 
     // Times
     Route::get('teams', [TeamsController::class, 'index'])->name('team.index');
