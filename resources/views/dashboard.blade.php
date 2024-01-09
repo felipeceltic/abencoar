@@ -47,12 +47,26 @@
                             </select>
                         </div>
                         <hr class="mt-3 pb-3">
+                        @php
+                            $totalGoals = 0;
+                            $totalAssists = 0;
+                            $totalTackles = 0;
+                            $totalDefenses = 0;
+                        @endphp
+                        @foreach (Auth::user()->player->statistics as $s)
+                            @php
+                                $totalGoals += $s->goals;
+                                $totalAssists += $s->assists;
+                                $totalTackles += $s->tackles;
+                                $totalDefenses += $s->defenses;
+                            @endphp
+                        @endforeach
                         <div class="col-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="goals">Gols</span>
                                 <input class="form-control" type="number" name="goals" id="goals" readonly
                                     aria-describedby="goals"
-                                    @if (Auth::user()->player != null) value="{{ Auth::user()->player->goals }}" @endif>
+                                    @if (Auth::user()->player != null) value="{{ $totalGoals }}" @endif>
                             </div>
                         </div>
                         <div class="col-6">
@@ -60,7 +74,7 @@
                                 <span class="input-group-text" id="assists">Assistencias</span>
                                 <input class="form-control" type="number" name="assists" id="assists" readonly
                                     aria-describedby="number"
-                                    @if (Auth::user()->player != null) value="{{ Auth::user()->player->assists }}" @endif>
+                                    @if (Auth::user()->player != null) value="{{ $totalAssists }}" @endif>
                             </div>
                         </div>
                         <div class="col-6">
@@ -68,7 +82,7 @@
                                 <span class="input-group-text" id="tackles">Desarmes</span>
                                 <input class="form-control" type="number" name="tackles" id="tackles" readonly
                                     aria-describedby="number"
-                                    @if (Auth::user()->player != null) value="{{ Auth::user()->player->tackles }}" @endif>
+                                    @if (Auth::user()->player != null) value="{{ $totalTackles }}" @endif>
                             </div>
                         </div>
                         <div class="col-6">
@@ -76,7 +90,7 @@
                                 <span class="input-group-text" id="defenses">Defesas GK</span>
                                 <input class="form-control" type="number" name="defenses" id="defenses" readonly
                                     aria-describedby="number"
-                                    @if (Auth::user()->player != null) value="{{ Auth::user()->player->defenses }}" @endif>
+                                    @if (Auth::user()->player != null) value="{{ $totalDefenses }}" @endif>
                             </div>
                         </div>
                         <div class="col-6">
