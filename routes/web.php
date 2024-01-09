@@ -39,6 +39,10 @@ Route::get('/error', function () {
 
 // Jogadores livre
 Route::post('player/{user}', [PlayerController::class, 'createOrUpdatePlayer'])->name('player.update');
+Route::get('player/card', function () {
+    $page = 'card';
+    return view('players.card', compact('page'));
+})->name('player.card');
 
 // Administradores
 Route::middleware('IsAdmin')->group(function () {

@@ -11,6 +11,12 @@
                     Meu jogador
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('player.card')}}"
+                    class="nav-link @if ($page === 'card') active @endif py-3 border-bottom rounded-0">
+                    Minha carta
+                </a>
+            </li>
             @if (Auth::user()->is_admin == true)
                 <li>
                     <a href="{{ route('player.index') }}"
@@ -80,6 +86,12 @@
                     <a href="/"
                         class="nav-link @if ($page === 'home') active @endif py-3 border-bottom rounded-0">
                         Meu jogador
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('player.card')}}"
+                        class="nav-link @if ($page === 'card') active @endif py-3 border-bottom rounded-0">
+                        Minha carta
                     </a>
                 </li>
                 @if (Auth::user()->is_admin == true)
