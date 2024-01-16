@@ -18,8 +18,7 @@
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="name">Meu nome</span>
                                 <input class="form-control" type="text" name="name" id="name"
-                                    aria-describedby="name" required
-                                    @if (Auth::user()->player != null) value="{{ Auth::user()->player->user->name }}" @endif>
+                                    aria-describedby="name" required value="{{ Auth::user()->name }}">
                             </div>
                         </div>
                         <div class="col-12 col-lg-6">
@@ -53,14 +52,16 @@
                             $totalTackles = 0;
                             $totalDefenses = 0;
                         @endphp
-                        @foreach (Auth::user()->player->statistics as $s)
-                            @php
-                                $totalGoals += $s->goals;
-                                $totalAssists += $s->assists;
-                                $totalTackles += $s->tackles;
-                                $totalDefenses += $s->defenses;
-                            @endphp
-                        @endforeach
+                        @if (Auth::user()->player != null)
+                            @foreach (Auth::user()->player->statistics as $s)
+                                @php
+                                    $totalGoals += $s->goals;
+                                    $totalAssists += $s->assists;
+                                    $totalTackles += $s->tackles;
+                                    $totalDefenses += $s->defenses;
+                                @endphp
+                            @endforeach
+                        @endif
                         <div class="col-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="goals">Gols</span>
